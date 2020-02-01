@@ -5,14 +5,16 @@ import gatt
 
 from lego_wireless import signals
 from lego_wireless.constants import CHARACTERISTIC_UUID
-from lego_wireless.enums import (
-    HubAttachedIOEvent,
-    MessageType,
-    HubProperty,
-    HubPropertyOperation,
-)
-from lego_wireless.hub_io import TrainMotor, HubIO, LEDLight, RGBLight
-from lego_wireless.messages import HubAttachedIO, HubProperties
+from lego_wireless.enums import HubAttachedIOEvent
+from lego_wireless.enums import HubProperty
+from lego_wireless.enums import HubPropertyOperation
+from lego_wireless.enums import MessageType
+from lego_wireless.hub_io import HubIO
+from lego_wireless.hub_io import LEDLight
+from lego_wireless.hub_io import RGBLight
+from lego_wireless.hub_io import TrainMotor
+from lego_wireless.messages import HubAttachedIO
+from lego_wireless.messages import HubProperties
 
 logger = logging.getLogger(__name__)
 

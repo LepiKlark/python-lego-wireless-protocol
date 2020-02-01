@@ -1,12 +1,15 @@
 import atexit
 import logging
 import threading
+import typing
 
-from lego_wireless.hub_io import TrainMotor, LEDLight
-from .manager import HubManager
 from . import signals
+from .hub import Hub
+from .manager import HubManager
+from lego_wireless.hub_io import LEDLight
+from lego_wireless.hub_io import TrainMotor
 
-hubs_seen = set()
+hubs_seen: typing.Set[Hub] = set()
 
 
 def hub_discovered(sender, hub):

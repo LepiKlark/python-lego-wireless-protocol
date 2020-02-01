@@ -1,7 +1,10 @@
 import collections
 import struct
 
-from .enums import HubAttachedIOEvent, IOType, HubProperty, HubPropertyOperation
+from .enums import HubAttachedIOEvent
+from .enums import HubProperty
+from .enums import HubPropertyOperation
+from .enums import IOType
 
 
 class HubAttachedIO(

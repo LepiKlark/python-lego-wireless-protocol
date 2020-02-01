@@ -1,6 +1,10 @@
-import struct
+from __future__ import annotations
 
-from .enums import MessageType, IOType
+import struct
+import typing
+
+from .enums import IOType
+from .enums import MessageType
 
 
 class HubIOMetaclass(type):
@@ -12,8 +16,8 @@ class HubIOMetaclass(type):
 
 
 class HubIO(metaclass=HubIOMetaclass):
-    io_type = None
-    registry = {}
+    io_type: IOType
+    registry: typing.Dict[IOType, typing.Type[HubIO]] = {}
 
     def __init__(self, train, port):
         self.train = train
